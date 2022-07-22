@@ -12,6 +12,8 @@
 
 **Candidato**: Joe Michael Hideyuki Furuya Takahassi
 
+**Descrição do projeto**:
+
 - Sem front-end framework
 - Mobile first
 
