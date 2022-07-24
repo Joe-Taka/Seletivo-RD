@@ -248,12 +248,11 @@
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
   z-index: 2;
   top: 50px;
   left: 108px;
   right: 108px;
-  background: var(--clr-white);
+  background-color: var(--clr-white);
   box-shadow: 0px 8px 18px rgba(33, 36, 41, 0.16);
   border-radius: 2px;
   padding: 24px;
