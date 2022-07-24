@@ -28,13 +28,37 @@
       <nav class="headerMenu">
         <!-- There's no problem with placing an image within a <nav> tag. -->
         <button>Menu 1</button>
-        <button class="dropdown">Menu 2
-          <img
-            src="./assets/icons/icon-down-arrow.svg"
-            alt="Seta para baixo"
-            style="margin-left: 8px"
-          />
-        </button>
+        <div class="dropdown">
+          <button class="dropbtn">
+            Menu 2
+            <img
+              src="./assets/icons/icon-down-arrow.svg"
+              alt="Seta para baixo"
+              style="margin-left: 8px"
+            />
+          </button>
+          <div class="dropdown-content">
+            <div class="categories">
+              <h1 class="title">Metodologia</h1>
+              <hr/>
+              <a class="body-sm" href="#">Tudo sobre Inbound Marketing</a>
+            </div>
+            <div class="categories">
+              <h1 class="title">Cursos</h1>
+              <hr>
+              <a class="body-sm" href="#">RD University</a>
+              <a class="body-sm" href="#">Introdução ao Inbound Marketing</a>
+              <a class="body-sm" href="#">RD Station Marketing Basic</a>
+            </div>
+            <div class="categories">
+              <h1 class="title">Ferramentas</h1>
+              <hr>
+              <a class="body-sm" href="#">Avalie seu funil de vendas</a>
+              <a class="body-sm" href="#">Compare suas métricas de Email Marketing</a>
+              <a class="body-sm" href="#">Calcule o ROI do RD Station Marketing</a>
+            </div>
+          </div>
+        </div>
         <button>Menu 3</button>
         <button>Menu 4</button>
       </nav>
@@ -42,7 +66,6 @@
         <button class="btnSecondary">button</button>
         <button
           class="btnPrimary"
-          style="display: flex; justify-content: center; align-items: center"
         >
           button
           <img
@@ -475,7 +498,7 @@
         } else {
           x.className = "header";
         }
-        console.log('x',x);
+        console.log("x", x);
       }
     </script>
   </body>
