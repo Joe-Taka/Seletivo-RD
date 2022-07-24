@@ -19,15 +19,16 @@
   <body style="background-color: var(--color-gray-30)">
     <!-- The header tag can be styled directly as same as styling div tags -->
     <header class="header" id="myHeader">
-      <img
-        class="headerLogo"
-        src="./assets/logos/logo-rd-station-default.svg"
-        alt="Ícone principal do RD Station"
-        style="height: auto; width: 174px"
-      />
-      <nav class="headerMenu">
+      <a href="#"
+        ><img
+          class="headerLogo"
+          src="./assets/logos/logo-rd-station-default.svg"
+          alt="Ícone principal do RD Station"
+          style="height: auto; width: 174px"
+      /></a>
+      <nav class="headerNav" id="myHeaderNav">
         <!-- There's no problem with placing an image within a <nav> tag. -->
-        <button>Menu 1</button>
+        <a href="#">Menu 1</a>
         <div class="dropdown">
           <button class="dropbtn">
             Menu 2
@@ -40,43 +41,45 @@
           <div class="dropdown-content">
             <div class="categories">
               <h1 class="title">Metodologia</h1>
-              <hr/>
+              <hr />
               <a class="body-sm" href="#">Tudo sobre Inbound Marketing</a>
             </div>
             <div class="categories">
               <h1 class="title">Cursos</h1>
-              <hr>
+              <hr />
               <a class="body-sm" href="#">RD University</a>
               <a class="body-sm" href="#">Introdução ao Inbound Marketing</a>
               <a class="body-sm" href="#">RD Station Marketing Basic</a>
             </div>
             <div class="categories">
               <h1 class="title">Ferramentas</h1>
-              <hr>
+              <hr />
               <a class="body-sm" href="#">Avalie seu funil de vendas</a>
-              <a class="body-sm" href="#">Compare suas métricas de Email Marketing</a>
-              <a class="body-sm" href="#">Calcule o ROI do RD Station Marketing</a>
+              <a class="body-sm" href="#"
+                >Compare suas métricas de Email Marketing</a
+              >
+              <a class="body-sm" href="#"
+                >Calcule o ROI do RD Station Marketing</a
+              >
             </div>
           </div>
         </div>
-        <button>Menu 3</button>
-        <button>Menu 4</button>
+        <a href="#">Menu 3</a>
+        <a href="#">Menu 4</a>
+        <div class="headerbtn" id="myHeaderbtn">
+          <button class="btnSecondary">button</button>
+          <button class="btnPrimary">
+            button
+            <img
+              src="./assets/icons/icon-long-arrow-right.svg"
+              alt="Seta para a direita"
+              style="margin-left: 8px"
+            />
+          </button>
+        </div>
       </nav>
-      <div class="headerButtons">
-        <button class="btnSecondary">button</button>
-        <button
-          class="btnPrimary"
-        >
-          button
-          <img
-            src="./assets/icons/icon-long-arrow-right.svg"
-            alt="Seta para a direita"
-            style="margin-left: 8px"
-          />
-        </button>
-      </div>
       <a
-        class="navButton"
+        class="navbtn"
         href="javascript:void(0);"
         class="icon"
         onclick="myFunction()"
@@ -180,7 +183,9 @@
           alcançar mais resultados.
         </p>
       </div>
-      <div class="together">
+    </div>
+    <div class="together">
+      <div class="togetherContainer">
         <h3 class="heading-sm">Estaremos juntos desde o primeiro passo!</h3>
         <p class="body-md" style="margin-top: 24px">
           Se você ainda não sabe como extrair o máximo das ações digitais, não
@@ -492,11 +497,11 @@
 
     <script>
       function myFunction() {
-        var x = document.getElementById("myHeader");
-        if (x.className === "header") {
+        var x = document.getElementById("myHeaderNav");
+        if (x.className === "headerNav") {
           x.className += " responsive";
         } else {
-          x.className = "header";
+          x.className = "headerNav";
         }
         console.log("x", x);
       }

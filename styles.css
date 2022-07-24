@@ -230,6 +230,7 @@
 
 .header {
   height: 80px;
+  width: 100%;
   background-color: var(--clr-white);
   border: 1px solid var(--clr-gray-30);
   padding: 0 7.5vw 0 7.5vw;
@@ -245,57 +246,96 @@
   }
 }
 
+.headerNav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 4.4vw;
+  margin: 0 2.5vw 0 2.5vw;
+}
+
+.headerNav > a, .dropbtn {
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  display: flex;
+  align-items: center;
+  color: var(--clr-gray-100);
+  text-decoration: none;
+  background: transparent;
+  border: none;
+}
+
+.headerbtn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 16px;
+}
+
+.navbtn {
+  color: var(--clr-primary-medium);
+  font-size: 30px;
+  text-decoration: none;
+  display: none;
+}
+
 .dropdown-content {
   display: none;
+  justify-content: center;
+  align-items: flex-start;
+  column-gap: 40px;
   position: absolute;
   z-index: 2;
-  top: 50px;
-  left: 108px;
-  right: 108px;
+  left: 0;
   background-color: var(--clr-white);
   box-shadow: 0px 8px 18px rgba(33, 36, 41, 0.16);
   border-radius: 2px;
   padding: 24px;
+  width: 100%;
 }
 
 .dropdown:hover .dropdown-content {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
-  column-gap: 40px;
 }
 
 @media screen and (max-width: 768px) {
-  .dropdown, .headerMenu > button, .headerButtons button {
+  .headerNav {
     display: none;
   }
-  .header .navButton {
-    float: right;
-    display: block;
+  .header a.navbtn {
+    display: flex;
   }
 }
 
 @media screen and (max-width: 768px) {
-    .header.responsive {position: relative; border: 2px solid blue}
-    .header.responsive .navButton {
-      float: none;
-      display: block;
-      text-align: left;
-    }
-    .header.responsive .dropdown {float: none;}
-    .header.responsive .dropdown-content {position: relative;}
-    .header.responsive .dropdown .dropbtn {
-      display: block;
-      width: 100%;
-      text-align: left;
-    }
+  .headerNav.responsive {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    width: 100%;
+    position: absolute;
+    top: 80px;
+    /* Tem que especificar pois o default value é auto */
+    left: 0;
+    margin: 0;
+    z-index: 2;
+    background-color: var(--clr-white);
+    padding: 24px 16px 56px 16px;
   }
+  .headerNav.responsive {
+    display: flex;
+  }
+}
 
-.dropdown-content .categories {
+.categories {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: flex-start;
   row-gap: 16px;
 }
@@ -319,50 +359,16 @@
   color: #19c1ce;
 }
 
-.navButton {
-  color: var(--clr-primary-medium);
-  font-size: 30px;
-  text-decoration: none;
-  display: none;
-}
-
-.headerMenu {
-  display: flex;
-  flex-direction: row;
-  column-gap: 4.4vw;
-  margin: 0 2.5vw 0 2.5vw;
-}
-
-/* .headerLogo {
+.headerLogo {
     width: min(50vw, 200px);
-} */
-
-.headerMenu > button,
-.dropbtn {
-  color: var(--clr-gray-100);
-  font-family: var(--fnt-nunito);
-  font-weight: var(--fnt-wgt-bold);
-  font-style: normal;
-  cursor: pointer;
-  font-size: 16px;
-  /* font-size: 1.17vw; */
-  line-height: 100%;
-  background-color: transparent;
-  background-repeat: no-repeat;
-  border: none;
-}
-
-.headerButtons {
-  display: flex;
-  flex-direction: row;
-  column-gap: 16px;
 }
 
 /* Hero */
 
 .hero {
   background-color: var(--clr-gray-10);
-  height: 1123px;
+  /* height: 1123px; */
+  height: 700px;
   clip-path: polygon(44% 0, 100% 41%, 100% 100%, 0 100%, 0 0);
 }
 
@@ -381,15 +387,19 @@
 
 .together {
   height: 331px;
+  background-color: var(--clr-primary-dark);
+  clip-path: polygon(7% 0, 100% 0, 100% 100%, 0 100%, 0 32%);
+  margin-bottom: 142px;
+}
+
+.togetherContainer {
+  color: var(--clr-white);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding: 80px 732px 80px 108px;
-  background-color: var(--clr-primary-dark);
-  color: var(--clr-white);
-  clip-path: polygon(7% 0, 100% 0, 100% 100%, 0 100%, 0 32%);
-  /* margin-bottom: 142px; */
+  row-gap: 24px;
+  margin: 0 108px 0 108px;
 }
 
 /* Forms */
