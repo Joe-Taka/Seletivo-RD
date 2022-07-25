@@ -981,6 +981,7 @@ q {
     margin: 0 108px 120px 108px;
     display: flex;
     flex-direction: column;
+
   }
   .itgrGrid {
     display: grid;
