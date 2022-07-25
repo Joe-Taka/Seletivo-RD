@@ -171,14 +171,16 @@
           name="name"
           placeholder="Insira seu nome"
           style="width: 100%"
+          required
         /><br />
         <label for="workemail">Seu email de trabalho</label><br />
         <input
-          type="text"
+          type="email"
           id="workemail"
           name="workemail"
           placeholder="Insira seu e-mail"
           style="width: 100%"
+          required
         /><br />
         <label for="tel">Seu telefone</label><br />
         <input
@@ -187,22 +189,51 @@
           name="tel"
           placeholder="Insira seu número de telefone com DDD"
           style="width: 100%"
+          required
         /><br />
         <label for="ocpt">Seu cargo de ocupação</label><br />
-        <input
-          type="text"
-          id="ocpt"
-          name="ocpt"
-          placeholder="Selecione seu cargo"
-          style="width: 100%"
-        /><br />
+        <select class="select" id="ocptMobile" name="occupation" form="job">
+          <option value="" disabled selected>Selecione seu cargo</option>
+          <option value="socio">Sócio(a) / CEO / Proprietário(a)</option>
+          <option value="diretorVendas">Diretor(a) de Vendas</option>
+          <option value="diretorMarkt">Diretor(a) de Marketing</option>
+          <option value="diretorOut">Diretor(a) Outras Áreas</option>
+          <option value="gerenteMark">Gerente de Marketing</option>
+          <option value="gerenteVendas">Gerente de Vendas</option>
+          <option value="coordMark">
+            Coordenador(a)/Supervisor(a) de Marketing
+          </option>
+          <option value="coordVendas">
+            Coordenador(a)/Supervisor(a) de Vendas
+          </option>
+          <option value="analistaMark">Analista/Assistente de Marketing</option>
+          <option value="analistaVenda">Analista/Assistente de Vendas</option>
+          <option value="vendConta">
+            Vendedor(a) / Executivo(a) de Contas
+          </option>
+          <option value="estudante">Estudante</option>
+          <option value="outros">Outros Cargos</option>
+        </select>
+        <br />
         <label for="pwd">Crie uma senha</label><br />
-        <input type="password" id="pwd" name="pwd" minlength="8" /><br />
+        <input
+          type="password"
+          id="pwd"
+          name="pwd"
+          pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])[a-zA-Z0-9]{6,10}$"
+          required
+        /><br />
         <label for="pwd">Confirme sua senha</label><br />
-        <input type="password" id="confirmpwd" name="pwd" minlength="8" /><br />
+        <input
+          type="password"
+          id="confirmpwd"
+          name="pwd"
+          pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])[a-zA-Z0-9]{6,10}$"
+          required
+        /><br />
         <label for="worksite">Qual o site da sua empresa?</label><br />
         <div>
-          <input type="radio" id="worksite" name="worksite" />
+          <input type="radio" id="worksite" name="worksite" required />
           <label for="radioInput">Meu site é:</label><br />
           <input
             type="text"
@@ -210,32 +241,33 @@
             name="worksite"
             placeholder="Insira o endereço do seu site"
             style="width: 100%; margin-top: 16px"
+            required
           />
         </div>
         <div style="margin-top: 16px">
-          <input type="radio" id="blanksite" name="worksite" />
+          <input type="radio" id="blanksite" name="worksite" required />
           <label for="blanksite">Ainda não tenho site</label>
         </div>
+        <ul
+          class="formList"
+          style="list-style-position: inside; margin: 24px 0 24px 0"
+        >
+          <li>
+            Ao criar minha conta estou de acordo com os termos de uso do
+            software e política de privacidade.
+          </li>
+          <li>
+            Ao preencher o formulário, concordo em receber comunicações de
+            acordo com meus interesses.
+          </li>
+          <li>
+            *Você pode alterar suas permissões de comunicação a qualquer tempo.
+          </li>
+        </ul>
+        <button type="submit" class="btnHighlight" style="width: 100%">
+          Criar minha conta
+        </button>
       </form>
-      <ul
-        class="formList"
-        style="list-style-position: inside; margin: 24px 0 24px 0"
-      >
-        <li>
-          Ao criar minha conta estou de acordo com os termos de uso do software
-          e política de privacidade.
-        </li>
-        <li>
-          Ao preencher o formulário, concordo em receber comunicações de acordo
-          com meus interesses.
-        </li>
-        <li>
-          *Você pode alterar suas permissões de comunicação a qualquer tempo.
-        </li>
-      </ul>
-      <button class="btnHighlight" style="width: 100%">
-        Criar minha conta
-      </button>
     </div>
 
     <div class="hero">
@@ -305,48 +337,72 @@
             name="name"
             placeholder="Insira seu nome"
             style="width: 100%"
+            required
           /><br />
           <label for="workemail">Seu email de trabalho</label><br />
           <input
-            type="text"
+            type="email"
             id="workemailMobile"
             name="workemail"
             placeholder="Insira seu e-mail"
             style="width: 100%"
+            required
           /><br />
           <label for="tel">Seu telefone</label><br />
           <input
             type="text"
             id="telMobile"
             name="tel"
+            data-mask="(00) 0000-0000#"
             placeholder="Insira seu número de telefone com DDD"
             style="width: 100%"
+            required
           /><br />
           <label for="ocptMobile">Seu cargo de ocupação</label><br />
-          <input
-            type="text"
-            id="ocptMobile"
-            name="ocpt"
-            placeholder="Selecione seu cargo"
-            style="width: 100%"
-          /><br />
+          <select class="select" id="ocptMobile" name="occupation" form="job">
+            <option value="" disabled selected>Selecione seu cargo</option>
+            <option value="socio">Sócio(a) / CEO / Proprietário(a)</option>
+            <option value="diretorVendas">Diretor(a) de Vendas</option>
+            <option value="diretorMarkt">Diretor(a) de Marketing</option>
+            <option value="diretorOut">Diretor(a) Outras Áreas</option>
+            <option value="gerenteMark">Gerente de Marketing</option>
+            <option value="gerenteVendas">Gerente de Vendas</option>
+            <option value="coordMark">
+              Coordenador(a)/Supervisor(a) de Marketing
+            </option>
+            <option value="coordVendas">
+              Coordenador(a)/Supervisor(a) de Vendas
+            </option>
+            <option value="analistaMark">
+              Analista/Assistente de Marketing
+            </option>
+            <option value="analistaVenda">Analista/Assistente de Vendas</option>
+            <option value="vendConta">
+              Vendedor(a) / Executivo(a) de Contas
+            </option>
+            <option value="estudante">Estudante</option>
+            <option value="outros">Outros Cargos</option>
+          </select>
+          <br />
           <label for="pwdMobile">Crie uma senha</label><br />
           <input
             type="password"
             id="pwdMobile"
             name="pwd"
-            minlength="8"
+            required
+            pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])[a-zA-Z0-9]{6,10}$"
           /><br />
           <label for="confirmpwdMobile">Confirme sua senha</label><br />
           <input
             type="password"
             id="confirmpwdMobile"
             name="pwd"
-            minlength="8"
+            pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])[a-zA-Z0-9]{6,10}$"
+            required
           /><br />
           <label for="worksiteMobile">Qual o site da sua empresa?</label><br />
           <div>
-            <input type="radio" id="worksiteMobile" name="worksite" />
+            <input type="radio" id="worksiteMobile" name="worksite" required />
             <label for="radioInputMobile">Meu site é:</label><br />
             <input
               type="text"
@@ -354,32 +410,34 @@
               name="worksite"
               placeholder="Insira o endereço do seu site"
               style="width: 100%; margin-top: 16px"
+              required
             />
           </div>
           <div style="margin-top: 16px">
-            <input type="radio" id="blanksiteMobile" name="worksite" />
+            <input type="radio" id="blanksiteMobile" name="worksite" required />
             <label for="blanksiteMobile">Ainda não tenho site</label>
           </div>
+          <ul
+            class="formList"
+            style="list-style-position: inside; margin: 24px 0 24px 0"
+          >
+            <li>
+              Ao criar minha conta estou de acordo com os termos de uso do
+              software e política de privacidade.
+            </li>
+            <li>
+              Ao preencher o formulário, concordo em receber comunicações de
+              acordo com meus interesses.
+            </li>
+            <li>
+              *Você pode alterar suas permissões de comunicação a qualquer
+              tempo.
+            </li>
+          </ul>
+          <button type="submit" class="btnHighlight" style="width: 100%">
+            Criar minha conta
+          </button>
         </form>
-        <ul
-          class="formList"
-          style="list-style-position: inside; margin: 24px 0 24px 0"
-        >
-          <li>
-            Ao criar minha conta estou de acordo com os termos de uso do
-            software e política de privacidade.
-          </li>
-          <li>
-            Ao preencher o formulário, concordo em receber comunicações de
-            acordo com meus interesses.
-          </li>
-          <li>
-            *Você pode alterar suas permissões de comunicação a qualquer tempo.
-          </li>
-        </ul>
-        <button class="btnHighlight" style="width: 100%">
-          Criar minha conta
-        </button>
       </div>
       <div class="togetherMobile">
         <div class="togetherContainerMobile">
@@ -558,6 +616,130 @@
         </div>
       </div>
     </section>
+
+    <div class="slideMobile">
+      <div class="slideshow-container">
+        <div class="mySlides">
+          <div class="benefitsSvg">
+            <img
+              class="benefitsSvg"
+              src="./assets/icons/icon-chart-line.svg"
+              alt="Chart line"
+            />
+          </div>
+          <h1 class="heading-sm" style="margin-top: 16px">
+            Torne sua operação de Marketing Digital mais produtiva
+          </h1>
+          <p class="body-md" style="margin-top: 16px">
+            Chega de usar várias ferramentas separadas e perder as informações
+            no caminho! Somos o que chamam de ferramenta tudo-em-um: reunimos os
+            principais recursos de Marketing Digital em um só lugar para sua
+            operação ser mais eficaz.
+          </p>
+        </div>
+        <div class="mySlides">
+          <div class="benefitsSvg">
+            <img
+              class="benefitsSvg"
+              src="./assets/icons/icon-bullhorn.svg"
+              alt="Bullhorn"
+            />
+          </div>
+          <h1 class="heading-sm" style="margin-top: 16px">
+            Crie facilmente campanhas que funcionam
+          </h1>
+          <p class="body-md" style="margin-top: 16px">
+            É fácil usar o RD Station Marketing, porque suas funcionalidades são
+            simples, mas poderosas, e contam com dezenas de modelos — como de
+            Landing Pages, Pop-ups, emails — para diversas ocasiões e segmentos
+            que você pode personalizar de acordo com a sua campanha.
+          </p>
+        </div>
+        <div class="mySlides">
+          <div class="benefitsSvg">
+            <img
+              class="benefitsSvg"
+              src="./assets/icons/icon-chart-network.svg"
+              alt="Chart network"
+            />
+          </div>
+          <div>
+            <h1 class="heading-sm" style="margin-top: 16px">
+              Construa jornadas personalizadas e gere vendas em escala
+            </h1>
+            <p class="body-md" style="margin-top: 16px">
+              Envie a mensagem certa na hora certa e construa jornadas
+              personalizadas que geram até 5x mais conversões e guiam Leads até
+              a compra. Automatize também suas tarefas e aumente a produtividade
+              de Marketing e Vendas.
+            </p>
+          </div>
+        </div>
+        <div class="mySlides">
+          <div class="benefitsSvg">
+            <img
+              class="benefitsSvg"
+              src="./assets/icons/icon-star.svg"
+              alt="Chart start"
+            />
+          </div>
+          <h1 class="heading-sm" style="margin-top: 16px">
+            Encontre automaticamente as melhores oportunidades
+          </h1>
+          <p class="body-md" style="margin-top: 16px">
+            Conheça melhor seu público, de acordo com as informações capturadas
+            nas suas páginas e formulários. Defina critérios para identificar
+            automaticamente Leads com maior potencial de compra e envie para o
+            comercial oportunidades qualificadas.
+          </p>
+        </div>
+        <div class="mySlides">
+          <div class="benefitsSvg">
+            <img
+              class="benefitsSvg"
+              src="./assets/icons/icon-chart-pie.svg"
+              alt="Chart pie"
+            />
+          </div>
+          <h1 class="heading-sm" style="margin-top: 16px">
+            Saia da incerteza e comprove resultados
+          </h1>
+          <p class="body-md" style="margin-top: 16px">
+            Ao invés de fazer uma série de ações isoladas, sem saber qual
+            funciona, junte as informações de todos os seus contatos e suas
+            ações em diferentes canais com recursos de análise para provar que
+            Marketing Digital traz mais vendas e clientes.
+          </p>
+        </div>
+        <div class="mySlides">
+          <div class="benefitsSvg">
+            <img
+              class="benefitsSvg"
+              src="./assets/icons/icon-globe.svg"
+              alt="Globe"
+            />
+          </div>
+          <h1 class="heading-sm" style="margin-top: 16px">
+            Suporte ágil e na sua língua
+          </h1>
+          <p class="body-md" style="margin-top: 16px">
+            Nosso time de suporte técnico está disponível quando você precisar,
+            com uma taxa de satisfação de 97% entre nossos clientes e um tempo
+            médio de resolução de 6 horas. E o melhor: tudo isso em português.
+          </p>
+        </div>
+      </div>
+
+      <div class="dot-container">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+      </div>
+    </div>
+
     <section>
       <div class="ctaContainer">
         <div class="ctaColumn">
@@ -739,6 +921,37 @@
           x.className = "headerNavMobile";
         }
         console.log("x", x);
+      }
+
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
       }
     </script>
   </body>

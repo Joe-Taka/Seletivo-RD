@@ -244,7 +244,6 @@
   .header {
     padding: 0 2vw;
   }
-
 }
 
 .headerNav {
@@ -461,7 +460,7 @@
   flex-direction: column;
 }
 
-.userForm > label {
+.userForm > label, .select > option {
   font-family: "Nunito Sans";
   font-style: normal;
   font-weight: 700;
@@ -469,7 +468,7 @@
   line-height: 24px;
 }
 
-.userForm > input {
+.userForm > input, .userForm > select {
   text-indent: 12px;
   height: 40px;
   background: var(--clr-white);
@@ -600,14 +599,14 @@
 }
 
 .ctaColumn > h2 {
-  width: 50%; 
+  width: 50%;
   color: var(--clr-white);
   text-align: center;
 }
 
 .ctaColumn > p {
-  width: 66%; 
-  margin-top: 24px; 
+  width: 66%;
+  margin-top: 24px;
   color: var(--clr-white);
   text-align: center;
 }
@@ -748,6 +747,54 @@
   position: relative;
 }
 
+/* Text slide */
+
+.slideMobile {
+  display: none;
+  margin: 24px 16px 40px 16px;
+}
+
+.slideshow-container {
+  position: relative;
+  background: #ffffff;
+  box-shadow: 0px 4px 12px rgba(33, 36, 41, 0.14);
+  border-radius: 2px;
+  margin: 0 16px;
+}
+
+.mySlides {
+  display: none;
+  padding: 24px;
+  text-align: left;
+}
+
+.dot-container {
+  text-align: center;
+  padding: 20px;
+  background: var(--clr-white);
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: var(--clr-white);
+  border: 2px solid var(--clr-gray-10);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: var(--clr-primary-medium);
+}
+
+q {
+  font-style: italic;
+}
+
 /* Query */
 
 @media screen and (max-width: 1218px) {
@@ -843,7 +890,8 @@
     z-index: 2;
     background-color: var(--clr-white);
   }
-  .hero, .formsContainer {
+  .hero,
+  .formsContainer {
     display: none;
   }
   .formsContainerMobile {
@@ -937,5 +985,11 @@
   }
   .footerContainer {
     display: none;
+  }
+  .benefitsContainer {
+    display: none;
+  }
+  .slideMobile {
+    display: block;
   }
 }
