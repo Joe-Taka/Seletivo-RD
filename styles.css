@@ -404,8 +404,9 @@
 
 .hero {
   background-color: var(--clr-gray-10);
-  height: 700px;
+  height: 1123px;
   clip-path: polygon(44% 0, 100% 41%, 100% 100%, 0 100%, 0 0);
+  position: relative;
 }
 
 .heroTextContainer {
@@ -424,6 +425,8 @@
   height: 331px;
   background-color: var(--clr-primary-dark);
   clip-path: polygon(7% 0, 100% 0, 100% 100%, 0 100%, 0 32%);
+  position: absolute;
+  bottom: 0;
 }
 
 .togetherContainer {
@@ -434,6 +437,8 @@
   align-items: flex-start;
   row-gap: 24px;
   margin: 0 108px 0 108px;
+  height: 100%;
+  width: 40vw;
 }
 
 /* Forms */
@@ -452,13 +457,17 @@
 
 @media screen and (max-width: 1218px) {
   .formsContainer {
-    width: 400px;
+    width: 390px;
   }
 }
 
 @media screen and (max-width: 1050px) {
   .formsContainer {
     width: 350px;
+    right: 80px;
+  }
+  .togetherContainer {
+    width: 38vw;
   }
 }
 
