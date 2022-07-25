@@ -343,32 +343,6 @@
   background-color: var(--clr-gray-10);
 }
 
-@media screen and (max-width: 768px) {
-  .headerNav {
-    display: none;
-  }
-  .header a.navbtn {
-    display: flex;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .headerNavMobile.responsive {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    position: absolute;
-    top: 80px;
-    /* Tem que especificar pois o default value é auto */
-    left: 0;
-    margin: 0;
-    z-index: 2;
-    background-color: var(--clr-white);
-  }
-}
-
 .categories {
   display: flex;
   flex-direction: column;
@@ -429,6 +403,13 @@
   bottom: 0;
 }
 
+.togetherMobile {
+  /* display: none; */
+  height: 331px;
+  background-color: var(--clr-primary-dark);
+  clip-path: polygon(7% 0, 100% 0, 100% 100%, 0 100%, 0 32%);
+}
+
 .togetherContainer {
   color: var(--clr-white);
   display: flex;
@@ -439,6 +420,19 @@
   margin: 0 108px 0 108px;
   height: 100%;
   width: 40vw;
+}
+
+.togetherContainerMobile {
+  color: var(--clr-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  row-gap: 16px;
+  margin-top: 40px;
+  padding: 48px 16px 40px 16px;
+  height: 100%;
+  width: auto;
 }
 
 /* Forms */
@@ -455,32 +449,11 @@
   z-index: 1;
 }
 
-@media screen and (max-width: 1218px) {
-  .formsContainer {
-    width: 390px;
-  }
-}
-
-@media screen and (max-width: 1050px) {
-  .formsContainer {
-    width: 350px;
-    right: 80px;
-  }
-  .togetherContainer {
-    width: 38vw;
-  }
-}
-
-@media screen and (max-width: 910px) {
-  .formsContainer {
-    width: 300px;
-  }
-}
-
-@media screen and (max-width: 850px) {
-  .formsContainer {
-    right: 40px;
-  }
+.formsContainerMobile {
+  display: none;
+  margin: 0 15px;
+  background-color: var(--clr-white);
+  padding: 40px 24px 40px 24px;
 }
 
 .userForm {
@@ -499,16 +472,16 @@
 .userForm > input {
   text-indent: 12px;
   height: 40px;
-  background: #ffffff;
-  border: 2px solid #000000;
+  background: var(--clr-white);
+  border: 2px solid var(--clr-black);
   box-shadow: inset 6px 6px 0px #eefbfb;
 }
 
 #radioInput {
   text-indent: 12px;
   height: 40px;
-  background: #ffffff;
-  border: 2px solid #000000;
+  background: var(--clr-white);
+  border: 2px solid var(--clr-black);
   box-shadow: inset 6px 6px 0px #eefbfb;
 }
 
@@ -526,7 +499,7 @@
 .resultadoContainer {
   height: 760px;
   width: 100%;
-  padding: 120px 108px 0 108px;
+  padding: 222px 108px 0 108px;
 }
 
 .resultadoContainer::before {
@@ -543,10 +516,10 @@
 
 .resultadoRow {
   display: flex;
-  column-gap: 128px;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
+  column-gap: 128px;
 }
 
 .resultadoList {
@@ -559,25 +532,13 @@
   width: 80vw;
 }
 
-@media screen and (max-width: 1110px) {
-  #resultadoImage {
-    height: 60vh;
-    width: auto;
-  }
-}
-
-@media screen and (max-width: 1010px) {
-  #resultadoImage {
-    height: 40vh;
-    width: auto;
-  }
-
-  .resultadoRow {
-    column-gap: 24px;
-  }
-}
-
 /* Benefits */
+
+.benefitsContainer {
+  padding: 0 108px 0 108px;
+  margin-bottom: 120px;
+  margin-top: 120px;
+}
 
 .benefitsGrid {
   display: grid;
@@ -585,10 +546,10 @@
   grid-template-columns: repeat(3, 1fr);
 }
 
-.benefitsGrid > div {
+.benefitsGridColumn {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   padding: 24px;
   background-color: var(--clr-white);
@@ -601,7 +562,10 @@
   display: flex;
   flex-direction: column;
   row-gap: 64px;
-  margin-bottom: 120px;
+}
+
+.benefitsColumn > h2 {
+  width: 50%;
 }
 
 .benefitsSvg {
@@ -621,6 +585,10 @@
 
 /* cta */
 
+.ctaContainer {
+  margin: 0 108px;
+}
+
 .ctaColumn {
   background-color: var(--clr-primary-dark);
   display: flex;
@@ -628,8 +596,20 @@
   justify-content: center;
   align-items: center;
   padding: 80px 0 80px 0;
-  border: 1px solid red;
   margin-bottom: 120px;
+}
+
+.ctaColumn > h2 {
+  width: 50%; 
+  color: var(--clr-white);
+  text-align: center;
+}
+
+.ctaColumn > p {
+  width: 66%; 
+  margin-top: 24px; 
+  color: var(--clr-white);
+  text-align: center;
 }
 
 /* demo */
@@ -638,7 +618,6 @@
   margin-right: 108px;
   margin-bottom: 144px;
   padding-left: 108px;
-  border: 1px solid black;
   background-color: var(--clr-gray-10);
   display: flex;
   flex-direction: row;
@@ -720,6 +699,26 @@
   align-items: space-between;
 }
 
+.footerContainerMobile {
+  display: none;
+  height: 221px;
+  background: var(--clr-primary-medium);
+  padding: 24px 16px 16px 40px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  row-gap: 24px;
+}
+
+.footerContainerMobile > hr {
+  width: 100%;
+}
+
+.footerContainerMobile > img {
+  height: 32px;
+  width: 174px;
+}
+
 .footerContainer > p {
   text-align: right;
 }
@@ -739,4 +738,204 @@
   display: flex;
   flex-direction: row;
   column-gap: 16px;
+}
+
+.heroMobile {
+  display: none;
+  background-color: var(--clr-gray-10);
+  height: 1800px;
+  clip-path: polygon(80% 0, 100% 5%, 100% 100%, 0 100%, 0 0);
+  position: relative;
+}
+
+/* Query */
+
+@media screen and (max-width: 1218px) {
+  .formsContainer {
+    width: 390px;
+  }
+}
+
+@media screen and (max-width: 1110px) {
+  #resultadoImage {
+    height: 60vh;
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .formsContainer {
+    width: 350px;
+    right: 80px;
+  }
+  .togetherContainer {
+    width: 38vw;
+  }
+  .resultadoRow {
+    column-gap: 70px;
+  }
+  .resultadoContainer {
+    padding-right: 80px;
+    padding-left: 80px;
+  }
+  .benefitsContainer {
+    padding: 0 70px 0 70px;
+  }
+}
+
+@media screen and (max-width: 1010px) {
+  #resultadoImage {
+    height: 40vh;
+    width: auto;
+  }
+  .benefitsContainer {
+    padding: 0 50px 0 50px;
+  }
+  .benefitsGrid {
+    gap: 5px;
+  }
+  .ctaContainer {
+    margin: 0 36px;
+  }
+}
+
+@media screen and (max-width: 910px) {
+  .formsContainer {
+    width: 300px;
+    right: 60px;
+  }
+  .benefitsContainer {
+    padding: 0 20px 0 20px;
+  }
+  .headerbtn {
+    column-gap: 10px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .formsContainer {
+    right: 40px;
+  }
+  .resultadoContainer {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .headerNav {
+    display: none;
+  }
+  .header a.navbtn {
+    display: flex;
+  }
+  .headerNavMobile.responsive {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    top: 80px;
+    /* Tem que especificar pois o default value é auto */
+    left: 0;
+    margin: 0;
+    z-index: 2;
+    background-color: var(--clr-white);
+  }
+  .hero, .formsContainer {
+    display: none;
+  }
+  .formsContainerMobile {
+    display: block;
+  }
+  .heroMobile {
+    display: block;
+  }
+  .ctaContainer {
+    margin: 0 16px;
+  }
+  .ctaColumn {
+    padding: 40px 16px;
+  }
+  .ctaColumn > h2 {
+    width: 100%;
+  }
+  .ctaColumn > p {
+    width: 100%;
+  }
+  .resultadoContainer {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .resultadoRow {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    row-gap: 40px;
+  }
+  #resultadoImage {
+    height: 325px;
+    width: auto;
+  }
+  .benefitsColumn {
+    margin-top: 40px;
+    text-align: center;
+    align-items: center;
+  }
+  .benefitsColumn > h2 {
+    width: 100%;
+  }
+  .heroTextContainer {
+    width: 100%;
+    row-gap: 40px;
+    padding: 40px 25px 32px 25px;
+  }
+  .together {
+    display: none;
+  }
+  .demoContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 40px 16px 0 16px;
+  }
+  .demoColumn {
+    width: 100%;
+    align-items: center;
+  }
+  .demoContainer > img {
+    width: 100%;
+    height: auto;
+    margin: 32px auto -15px auto;
+  }
+  .itgrRow {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 40px;
+  }
+  .itgrContainer {
+    margin: 0 108px 120px 108px;
+    display: flex;
+    flex-direction: column;
+  }
+  .itgrGrid {
+    display: grid;
+    gap: 40px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footerContainerMobile {
+    display: flex;
+  }
+  .footerContainer {
+    display: none;
+  }
 }

@@ -147,10 +147,13 @@
         >&#9776;</a
       >
     </header>
-    
+
     <!-- A hero image is a website design term used to describe an oversized banner image at the top of a website. -->
     <div class="formsContainer">
-      <h4 class="heading-xs" style="text-align: center; color: var(--clr-gray-100)">
+      <h4
+        class="heading-xs"
+        style="text-align: center; color: var(--clr-gray-100)"
+      >
         Comece seus 10 dias de teste grátis do RD Station Marketing!
       </h4>
       <p
@@ -196,7 +199,7 @@
         <label for="pwd">Crie uma senha</label><br />
         <input type="password" id="pwd" name="pwd" minlength="8" /><br />
         <label for="pwd">Confirme sua senha</label><br />
-        <input type="password" id="pwd" name="pwd" minlength="8" /><br />
+        <input type="password" id="confirmpwd" name="pwd" minlength="8" /><br />
         <label for="worksite">Qual o site da sua empresa?</label><br />
         <div>
           <input type="radio" id="worksite" name="worksite" />
@@ -262,6 +265,137 @@
         </div>
       </div>
     </div>
+
+    <div class="heroMobile">
+      <div class="heroTextContainer">
+        <h1 class="heading-lg" style="color: var(--clr-gray-100)">
+          Gere mais
+          <span style="color: var(--clr-primary-medium)">oportunidades</span>
+          para seu negócio
+        </h1>
+        <p class="body-lg">
+          O RD Station Marketing é um software para sua empresa fazer campanhas
+          melhores, nutrir Leads, gerar oportunidades comerciais qualificadas e
+          alcançar mais resultados.
+        </p>
+      </div>
+      <div class="formsContainerMobile">
+        <h4
+          class="heading-xs"
+          style="text-align: center; color: var(--clr-gray-100)"
+        >
+          Comece seus 10 dias de teste grátis do RD Station Marketing!
+        </h4>
+        <p
+          class="subtitle-xs"
+          style="
+            margin-top: 16px;
+            text-align: center;
+            color: var(--clr-gray-70);
+          "
+        >
+          Não precisa cadastrar cartão de crédito. 😉
+        </p>
+        <hr style="margin: 24px 0 24px 0" />
+        <form class="userForm">
+          <label for="name">Diga, qual seu nome?</label><br />
+          <input
+            type="text"
+            id="nameMobile"
+            name="name"
+            placeholder="Insira seu nome"
+            style="width: 100%"
+          /><br />
+          <label for="workemail">Seu email de trabalho</label><br />
+          <input
+            type="text"
+            id="workemailMobile"
+            name="workemail"
+            placeholder="Insira seu e-mail"
+            style="width: 100%"
+          /><br />
+          <label for="tel">Seu telefone</label><br />
+          <input
+            type="text"
+            id="telMobile"
+            name="tel"
+            placeholder="Insira seu número de telefone com DDD"
+            style="width: 100%"
+          /><br />
+          <label for="ocptMobile">Seu cargo de ocupação</label><br />
+          <input
+            type="text"
+            id="ocptMobile"
+            name="ocpt"
+            placeholder="Selecione seu cargo"
+            style="width: 100%"
+          /><br />
+          <label for="pwdMobile">Crie uma senha</label><br />
+          <input
+            type="password"
+            id="pwdMobile"
+            name="pwd"
+            minlength="8"
+          /><br />
+          <label for="confirmpwdMobile">Confirme sua senha</label><br />
+          <input
+            type="password"
+            id="confirmpwdMobile"
+            name="pwd"
+            minlength="8"
+          /><br />
+          <label for="worksiteMobile">Qual o site da sua empresa?</label><br />
+          <div>
+            <input type="radio" id="worksiteMobile" name="worksite" />
+            <label for="radioInputMobile">Meu site é:</label><br />
+            <input
+              type="text"
+              id="radioInputMobile"
+              name="worksite"
+              placeholder="Insira o endereço do seu site"
+              style="width: 100%; margin-top: 16px"
+            />
+          </div>
+          <div style="margin-top: 16px">
+            <input type="radio" id="blanksiteMobile" name="worksite" />
+            <label for="blanksiteMobile">Ainda não tenho site</label>
+          </div>
+        </form>
+        <ul
+          class="formList"
+          style="list-style-position: inside; margin: 24px 0 24px 0"
+        >
+          <li>
+            Ao criar minha conta estou de acordo com os termos de uso do
+            software e política de privacidade.
+          </li>
+          <li>
+            Ao preencher o formulário, concordo em receber comunicações de
+            acordo com meus interesses.
+          </li>
+          <li>
+            *Você pode alterar suas permissões de comunicação a qualquer tempo.
+          </li>
+        </ul>
+        <button class="btnHighlight" style="width: 100%">
+          Criar minha conta
+        </button>
+      </div>
+      <div class="togetherMobile">
+        <div class="togetherContainerMobile">
+          <h3 class="heading-sm">Estaremos juntos desde o primeiro passo!</h3>
+          <p class="body-md" style="margin-top: 24px">
+            Se você ainda não sabe como extrair o máximo das ações digitais, não
+            tem problema. O <strong>RD Station Marketing</strong> é mais que uma
+            ferramenta, nos importamos com os seus resultados.
+          </p>
+          <p class="body-md">
+            <strong>Estaremos com você do planejamento até a prática!</strong>
+          </p>
+        </div>
+      </div>
+    </div>
+
     <section>
       <div class="resultadoContainer">
         <div class="resultadoRow">
@@ -279,25 +413,25 @@
             </p>
             <ul class="resultadoList body-md" style="margin-top: 40px">
               <li>
-                <strong>Ferramentas intuitivas</strong> e com modelos prontos, vídeos
-                explicativos e passo a passo guiado
+                <strong>Ferramentas intuitivas</strong> e com modelos prontos,
+                vídeos explicativos e passo a passo guiado
               </li>
               <li>
-                <strong>Implementação com especialistas</strong> focada em planejamento e prática
-                (nos planos Marketing Pro e Enterprise)
+                <strong>Implementação com especialistas</strong> focada em
+                planejamento e prática (nos planos Marketing Pro e Enterprise)
               </li>
               <li>
-                <strong>Time de especialistas em Sucesso do Cliente</strong> para apoiar na
-                otimização da estratégia em cada fase da sua jornada (nos planos
-                Marketing Pro e Enterprise)
-              </li>
-              <li>  
-                <strong>Suporte técnico</strong> em português, espanhol e inglês para tirar
-                dúvidas, com 97% de satisfação entre nossos clientes
+                <strong>Time de especialistas em Sucesso do Cliente</strong>
+                para apoiar na otimização da estratégia em cada fase da sua
+                jornada (nos planos Marketing Pro e Enterprise)
               </li>
               <li>
-                <strong>Muito conteúdo educativo</strong>, eventos, cursos da RD University e
-                comunidades para você continuar evoluindo
+                <strong>Suporte técnico</strong> em português, espanhol e inglês
+                para tirar dúvidas, com 97% de satisfação entre nossos clientes
+              </li>
+              <li>
+                <strong>Muito conteúdo educativo</strong>, eventos, cursos da RD
+                University e comunidades para você continuar evoluindo
               </li>
             </ul>
           </div>
@@ -305,13 +439,13 @@
       </div>
     </section>
     <section>
-      <div class="container">
+      <div class="benefitsContainer">
         <div class="benefitsColumn">
-          <h2 class="heading-md" style="width: 50%">
+          <h2 class="heading-md">
             A ferramenta de Automação de Marketing líder na América Latina
           </h2>
           <div class="benefitsGrid">
-            <div>
+            <div class="benefitsGridColumn">
               <div class="benefitsSvg">
                 <img
                   class="benefitsSvg"
@@ -329,7 +463,7 @@
                 em um só lugar para sua operação ser mais eficaz.
               </p>
             </div>
-            <div>
+            <div class="benefitsGridColumn">
               <div class="benefitsSvg">
                 <img
                   class="benefitsSvg"
@@ -338,7 +472,7 @@
                 />
               </div>
               <h1 class="heading-sm">
-                Torne sua operação de Marketing Digital mais produtiva
+                Crie facilmente campanhas que funcionam
               </h1>
               <p class="body-md">
                 É fácil usar o RD Station Marketing, porque suas funcionalidades
@@ -348,7 +482,7 @@
                 campanha.
               </p>
             </div>
-            <div>
+            <div class="benefitsGridColumn">
               <div class="benefitsSvg">
                 <img
                   class="benefitsSvg"
@@ -356,17 +490,19 @@
                   alt="Chart network"
                 />
               </div>
-              <h1 class="heading-sm">
-                Torne sua operação de Marketing Digital mais produtiva
-              </h1>
-              <p class="body-md">
-                Envie a mensagem certa na hora certa e construa jornadas
-                personalizadas que geram até 5x mais conversões e guiam Leads
-                até a compra. Automatize também suas tarefas e aumente a
-                produtividade de Marketing e Vendas.
-              </p>
+              <div>
+                <h1 class="heading-sm">
+                  Construa jornadas personalizadas e gere vendas em escala
+                </h1>
+                <p class="body-md" style="margin-top: 16px">
+                  Envie a mensagem certa na hora certa e construa jornadas
+                  personalizadas que geram até 5x mais conversões e guiam Leads
+                  até a compra. Automatize também suas tarefas e aumente a
+                  produtividade de Marketing e Vendas.
+                </p>
+              </div>
             </div>
-            <div>
+            <div class="benefitsGridColumn">
               <div class="benefitsSvg">
                 <img
                   class="benefitsSvg"
@@ -375,7 +511,7 @@
                 />
               </div>
               <h1 class="heading-sm">
-                Torne sua operação de Marketing Digital mais produtiva
+                Encontre automaticamente as melhores oportunidades
               </h1>
               <p class="body-md">
                 Conheça melhor seu público, de acordo com as informações
@@ -384,7 +520,7 @@
                 e envie para o comercial oportunidades qualificadas.
               </p>
             </div>
-            <div>
+            <div class="benefitsGridColumn">
               <div class="benefitsSvg">
                 <img
                   class="benefitsSvg"
@@ -393,7 +529,7 @@
                 />
               </div>
               <h1 class="heading-sm">
-                Torne sua operação de Marketing Digital mais produtiva
+                Saia da incerteza e comprove resultados
               </h1>
               <p class="body-md">
                 Ao invés de fazer uma série de ações isoladas, sem saber qual
@@ -402,7 +538,7 @@
                 que Marketing Digital traz mais vendas e clientes.
               </p>
             </div>
-            <div>
+            <div class="benefitsGridColumn">
               <div class="benefitsSvg">
                 <img
                   class="benefitsSvg"
@@ -410,9 +546,7 @@
                   alt="Globe"
                 />
               </div>
-              <h1 class="heading-sm">
-                Torne sua operação de Marketing Digital mais produtiva
-              </h1>
+              <h1 class="heading-sm">Suporte ágil e na sua língua</h1>
               <p class="body-md">
                 Nosso time de suporte técnico está disponível quando você
                 precisar, com uma taxa de satisfação de 97% entre nossos
@@ -425,15 +559,12 @@
       </div>
     </section>
     <section>
-      <div class="container">
+      <div class="ctaContainer">
         <div class="ctaColumn">
-          <h2 class="heading-md" style="width: 50%; color: var(--clr-white)">
+          <h2 class="heading-md">
             Por que mais de 25.000 empresas escolheram o RD Station?
           </h2>
-          <p
-            class="body-md"
-            style="width: 66%; margin-top: 24px; color: var(--clr-white)"
-          >
+          <p class="body-md">
             Combinamos nossos produtos de Marketing e Vendas com pessoas que se
             importam com seus resultados e um ecossistema que apoia o seu
             negócio do planejamento à prática.
@@ -552,6 +683,45 @@
           </div>
         </div>
         <hr style="border: 1px solid #78edf2" />
+        <p class="body-sm">
+          © 2021 <strong>RD Station</strong>.
+          <span style="text-decoration: underline">Política de Privacidade</span
+          >.
+        </p>
+      </div>
+    </footer>
+
+    <footer>
+      <div class="footerContainerMobile">
+        <img src="./assets/logos/logo-rd-station-bw.svg" />
+        <hr style="border: 1px solid #78edf2" />
+        <div class="footerSocials">
+          <a href="//google.com" target="”_blank"
+            ><img
+              src="./assets/socials/socials-twitter.svg"
+              alt="Logo do twitter"
+          /></a>
+          <a href="//google.com" target="”_blank"
+            ><img
+              src="./assets/socials/socials-facebook.svg"
+              alt="Logo do facebook"
+          /></a>
+          <a href="//google.com" target="”_blank"
+            ><img
+              src="./assets/socials/socials-linkedin.svg"
+              alt="Logo do Linkedin"
+          /></a>
+          <a href="//google.com" target="”_blank"
+            ><img
+              src="./assets/socials/socials-instagram.svg"
+              alt="Logo do Instagram"
+          /></a>
+          <a href="//google.com" target="”_blank"
+            ><img
+              src="./assets/socials/socials-youtube.svg"
+              alt="Logo do Youtube"
+          /></a>
+        </div>
         <p class="body-sm">
           © 2021 <strong>RD Station</strong>.
           <span style="text-decoration: underline">Política de Privacidade</span

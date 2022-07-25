@@ -15,7 +15,6 @@
 **Descrição do projeto**:
 
 - Sem front-end framework
-- Mobile first
 
 
 
