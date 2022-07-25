@@ -183,7 +183,6 @@
 
 .btnPrimary {
   padding: 8px 16px 8px 16px;
-  /* width: 94px; */
   height: 40px;
   background: var(--clr-primary-medium);
   color: var(--clr-gray-100);
@@ -220,6 +219,10 @@
   box-shadow: 0 5px 3px -2px var(--clr-gray-100);
   text-align: center;
   letter-spacing: 0.04em;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .btnHighlight:hover {
@@ -491,6 +494,10 @@
   font-size: 12px;
   line-height: 150%;
   color: var(--clr-gray-70);
+}
+
+.terms {
+  color: var(--clr-primary-medium);
 }
 
 /* Resultado */

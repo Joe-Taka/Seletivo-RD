@@ -163,7 +163,7 @@
         Não precisa cadastrar cartão de crédito. 😉
       </p>
       <hr style="margin: 24px 0 24px 0" />
-      <form class="userForm">
+      <form action="//app.rdstation.com.br/signup" method="post" class="userForm">
         <label for="name">Diga, qual seu nome?</label><br />
         <input
           type="text"
@@ -218,25 +218,28 @@
         <label for="pwd">Crie uma senha</label><br />
         <input
           type="password"
-          id="pwd"
+          id="password"
           name="pwd"
+          placeholder="min 6, max 10 caracteres..."
           pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])[a-zA-Z0-9]{6,10}$"
           required
         /><br />
         <label for="pwd">Confirme sua senha</label><br />
         <input
           type="password"
-          id="confirmpwd"
+          id="confirm_password"
           name="pwd"
+          placeholder="Confirme sua senha"
           pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])[a-zA-Z0-9]{6,10}$"
           required
-        /><br />
+        />
+        <br />
         <label for="worksite">Qual o site da sua empresa?</label><br />
         <div>
           <input type="radio" id="worksite" name="worksite" required />
           <label for="radioInput">Meu site é:</label><br />
           <input
-            type="text"
+            type="url"
             id="radioInput"
             name="worksite"
             placeholder="Insira o endereço do seu site"
@@ -253,8 +256,8 @@
           style="list-style-position: inside; margin: 24px 0 24px 0"
         >
           <li>
-            Ao criar minha conta estou de acordo com os termos de uso do
-            software e política de privacidade.
+            Ao criar minha conta estou de acordo com os <a class="terms" target="_blank" href="https://legal.rdstation.com/pt-BR/rdstation-services-agreement/">termos de uso</a> do
+            software e <a class="terms" href="https://legal.rdstation.com/pt/privacy-policy/" target="_blank">política de privacidade</a>.
           </li>
           <li>
             Ao preencher o formulário, concordo em receber comunicações de
@@ -329,7 +332,7 @@
           Não precisa cadastrar cartão de crédito. 😉
         </p>
         <hr style="margin: 24px 0 24px 0" />
-        <form class="userForm">
+        <form action="//app.rdstation.com.br/signup" method="post" class="userForm">
           <label for="name">Diga, qual seu nome?</label><br />
           <input
             type="text"
@@ -399,13 +402,14 @@
             name="pwd"
             pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])[a-zA-Z0-9]{6,10}$"
             required
-          /><br />
+          />
+          <br />
           <label for="worksiteMobile">Qual o site da sua empresa?</label><br />
           <div>
             <input type="radio" id="worksiteMobile" name="worksite" required />
             <label for="radioInputMobile">Meu site é:</label><br />
             <input
-              type="text"
+              type="url"
               id="radioInputMobile"
               name="worksite"
               placeholder="Insira o endereço do seu site"
@@ -422,8 +426,8 @@
             style="list-style-position: inside; margin: 24px 0 24px 0"
           >
             <li>
-              Ao criar minha conta estou de acordo com os termos de uso do
-              software e política de privacidade.
+              Ao criar minha conta estou de acordo com os <a class="terms" target="_blank" href="https://legal.rdstation.com/pt-BR/rdstation-services-agreement/">termos de uso</a> do
+              software e <a class="terms" href="https://legal.rdstation.com/pt/privacy-policy/" target="_blank">política de privacidade</a>.
             </li>
             <li>
               Ao preencher o formulário, concordo em receber comunicações de
@@ -751,9 +755,9 @@
             importam com seus resultados e um ecossistema que apoia o seu
             negócio do planejamento à prática.
           </p>
-          <button class="btnHighlight" style="margin-top: 40px">
+          <a href="https://app.rdstation.com.br/signup" target="_blank" class="btnHighlight" style="margin-top: 40px; text-decoration: none;">
             criar conta gratuita
-          </button>
+          </a>
         </div>
       </div>
     </section>
@@ -826,9 +830,9 @@
             </div>
           </div>
         </div>
-        <button class="btnPrimary" style="margin-top: 40px">
+        <a href="https://app.rdstation.com.br/signup" target="_blank" class="btnPrimary" style="margin-top: 40px; text-decoration: none;">
           Criar conta gratuita
-        </button>
+        </a>
       </div>
     </section>
     <!-- The footer tag is used within the body tag. -->
@@ -837,27 +841,27 @@
         <div class="footerRow">
           <img src="./assets/logos/logo-rd-station-bw.svg" />
           <div class="footerSocials">
-            <a href="//google.com" target="”_blank"
+            <a href="https://twitter.com/rd_station" target="_blank"
               ><img
                 src="./assets/socials/socials-twitter.svg"
                 alt="Logo do twitter"
             /></a>
-            <a href="//google.com" target="”_blank"
+            <a href="https://www.facebook.com/ResultadosDigitais/" target="_blank"
               ><img
                 src="./assets/socials/socials-facebook.svg"
                 alt="Logo do facebook"
             /></a>
-            <a href="//google.com" target="”_blank"
+            <a href="https://www.linkedin.com/company/resultadosdigitais" target="_blank"
               ><img
                 src="./assets/socials/socials-linkedin.svg"
                 alt="Logo do Linkedin"
             /></a>
-            <a href="//google.com" target="”_blank"
+            <a href="https://www.instagram.com/resdigitais/" target="_blank"
               ><img
                 src="./assets/socials/socials-instagram.svg"
                 alt="Logo do Instagram"
             /></a>
-            <a href="//google.com" target="”_blank"
+            <a href="https://www.youtube.com/channel/UC5lPKvmw6-DFya_qreisENQ" target="_blank"
               ><img
                 src="./assets/socials/socials-youtube.svg"
                 alt="Logo do Youtube"
@@ -867,7 +871,7 @@
         <hr style="border: 1px solid #78edf2" />
         <p class="body-sm">
           © 2021 <strong>RD Station</strong>.
-          <span style="text-decoration: underline">Política de Privacidade</span
+          <a class="terms" href="https://legal.rdstation.com/pt/privacy-policy/" target="_blank">Política de Privacidade</a
           >.
         </p>
       </div>
@@ -878,27 +882,27 @@
         <img src="./assets/logos/logo-rd-station-bw.svg" />
         <hr style="border: 1px solid #78edf2" />
         <div class="footerSocials">
-          <a href="//google.com" target="”_blank"
+          <a href="https://twitter.com/rd_station" target="_blank"
             ><img
               src="./assets/socials/socials-twitter.svg"
               alt="Logo do twitter"
           /></a>
-          <a href="//google.com" target="”_blank"
+          <a href="https://www.facebook.com/ResultadosDigitais/" target="_blank"
             ><img
               src="./assets/socials/socials-facebook.svg"
               alt="Logo do facebook"
           /></a>
-          <a href="//google.com" target="”_blank"
+          <a href="https://www.linkedin.com/company/resultadosdigitais" target="_blank"
             ><img
               src="./assets/socials/socials-linkedin.svg"
               alt="Logo do Linkedin"
           /></a>
-          <a href="//google.com" target="”_blank"
+          <a href="https://www.instagram.com/resdigitais/" target="_blank"
             ><img
               src="./assets/socials/socials-instagram.svg"
               alt="Logo do Instagram"
           /></a>
-          <a href="//google.com" target="”_blank"
+          <a href="https://www.youtube.com/channel/UC5lPKvmw6-DFya_qreisENQ" target="_blank"
             ><img
               src="./assets/socials/socials-youtube.svg"
               alt="Logo do Youtube"
@@ -906,7 +910,7 @@
         </div>
         <p class="body-sm">
           © 2021 <strong>RD Station</strong>.
-          <span style="text-decoration: underline">Política de Privacidade</span
+          <a href="https://legal.rdstation.com/pt/privacy-policy/" target="_blank">Política de Privacidade</a
           >.
         </p>
       </div>
@@ -953,6 +957,22 @@
         slides[slideIndex - 1].style.display = "block";
         dots[slideIndex - 1].className += " active";
       }
+
+      /* Password Validation */
+
+      var password = document.getElementById("password"),
+        confirm_password = document.getElementById("confirm_password");
+
+      function validatePassword() {
+        if (password.value != confirm_password.value) {
+          confirm_password.setCustomValidity("As senhas não conferem");
+        } else {
+          confirm_password.setCustomValidity("");
+        }
+      }
+
+      password.onchange = validatePassword;
+      confirm_password.onkeyup = validatePassword;
     </script>
   </body>
 </html>
