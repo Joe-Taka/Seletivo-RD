@@ -26,7 +26,7 @@
           alt="Ícone principal do RD Station"
           style="height: auto; width: 174px"
       /></a>
-      <nav class="headerNav" id="myHeaderNav">
+      <nav class="headerNav">
         <!-- There's no problem with placing an image within a <nav> tag. -->
         <a href="#">Menu 1</a>
         <div class="dropdown">
@@ -66,7 +66,7 @@
         </div>
         <a href="#">Menu 3</a>
         <a href="#">Menu 4</a>
-        <div class="headerbtn" id="myHeaderbtn">
+        <div class="headerbtn">
           <button class="btnSecondary">button</button>
           <button class="btnPrimary">
             button
@@ -78,6 +78,67 @@
           </button>
         </div>
       </nav>
+
+      <nav class="headerNavMobile" id="myHeaderNav">
+        <div class="menuContainerMobile">
+          <!-- There's no problem with placing an image within a <nav> tag. -->
+          <a href="#">Menu 1</a>
+          <hr />
+          <div class="dropdown">
+            <button class="dropbtn">
+              Menu 2
+              <img
+                src="./assets/icons/icon-down-arrow.svg"
+                alt="Seta para baixo"
+                style="margin-left: 8px"
+              />
+            </button>
+            <div class="dropdown-content">
+              <div class="categories">
+                <h1 class="title">Metodologia</h1>
+                <hr />
+                <a class="body-sm" href="#">Tudo sobre Inbound Marketing</a>
+              </div>
+              <div class="categories">
+                <h1 class="title">Cursos</h1>
+                <hr />
+                <a class="body-sm" href="#">RD University</a>
+                <a class="body-sm" href="#">Introdução ao Inbound Marketing</a>
+                <a class="body-sm" href="#">RD Station Marketing Basic</a>
+              </div>
+              <div class="categories">
+                <h1 class="title">Ferramentas</h1>
+                <hr />
+                <a class="body-sm" href="#">Avalie seu funil de vendas</a>
+                <a class="body-sm" href="#"
+                  >Compare suas métricas de Email Marketing</a
+                >
+                <a class="body-sm" href="#"
+                  >Calcule o ROI do RD Station Marketing</a
+                >
+              </div>
+            </div>
+          </div>
+          <hr />
+          <a href="#">Menu 3</a>
+          <hr />
+          <a href="#">Menu 4</a>
+          <hr />
+          <a href="#">Menu 5</a>
+        </div>
+        <div class="headerbtnMobile">
+          <button class="btnSecondary">button</button>
+          <button class="btnPrimary">
+            button
+            <img
+              src="./assets/icons/icon-long-arrow-right.svg"
+              alt="Seta para a direita"
+              style="margin-left: 8px"
+            />
+          </button>
+        </div>
+      </nav>
+
       <a
         class="navbtn"
         href="javascript:void(0);"
@@ -86,6 +147,7 @@
         >&#9776;</a
       >
     </header>
+    
     <!-- A hero image is a website design term used to describe an oversized banner image at the top of a website. -->
     <div class="formsContainer">
       <h4 class="heading-xs" style="text-align: center">
@@ -170,6 +232,7 @@
         Criar minha conta
       </button>
     </div>
+
     <div class="hero">
       <div class="heroTextContainer">
         <h1 class="heading-lg" style="color: var(--clr-gray-100)">
@@ -214,24 +277,24 @@
             </p>
             <ul class="resultadoList body-md" style="margin-top: 40px">
               <li>
-                Ferramentas intuitivas e com modelos prontos, vídeos
+                <strong>Ferramentas intuitivas</strong> e com modelos prontos, vídeos
                 explicativos e passo a passo guiado
               </li>
               <li>
-                Implementação com especialistas focada em planejamento e prática
+                <strong>Implementação com especialistas</strong> focada em planejamento e prática
                 (nos planos Marketing Pro e Enterprise)
               </li>
               <li>
-                Time de especialistas em Sucesso do Cliente para apoiar na
+                <strong>Time de especialistas em Sucesso do Cliente</strong> para apoiar na
                 otimização da estratégia em cada fase da sua jornada (nos planos
                 Marketing Pro e Enterprise)
               </li>
-              <li>
-                Suporte técnico em português, espanhol e inglês para tirar
+              <li>  
+                <strong>Suporte técnico</strong> em português, espanhol e inglês para tirar
                 dúvidas, com 97% de satisfação entre nossos clientes
               </li>
               <li>
-                Muito conteúdo educativo, eventos, cursos da RD University e
+                <strong>Muito conteúdo educativo</strong>, eventos, cursos da RD University e
                 comunidades para você continuar evoluindo
               </li>
             </ul>
@@ -498,10 +561,10 @@
     <script>
       function myFunction() {
         var x = document.getElementById("myHeaderNav");
-        if (x.className === "headerNav") {
+        if (x.className === "headerNavMobile") {
           x.className += " responsive";
         } else {
-          x.className = "headerNav";
+          x.className = "headerNavMobile";
         }
         console.log("x", x);
       }
